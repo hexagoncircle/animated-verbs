@@ -10,7 +10,7 @@ const handleMenuItemClick = (item) => {
   item.addEventListener('click', () => document.body.classList.remove(activeClass))
 }
 
-const addMenuItemEvent = (menu) => {
+const setupmM = (menu) => {
   [...menu.children].forEach(item => handleMenuItemClick(item));
 }
 
@@ -39,4 +39,4 @@ menuToggle.addEventListener('click', (e) => {
 
 setupHeadlineRefs(verbs.children);
 buildMenu(menu);
-addMenuItemEvent(menu);
+setupmM(menu);

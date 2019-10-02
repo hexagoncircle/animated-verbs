@@ -43,7 +43,7 @@ a:not([class]) {
   display: none;
   grid-template: repeat(6, 1fr)/repeat(3, 1fr);
   height: 100%;
-  padding: 4rem;
+  padding: 4rem 0.5rem;
   place-items: center;
   width: 100%;
   z-index: 100; }

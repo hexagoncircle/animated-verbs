@@ -6,8 +6,19 @@ const menuToggle = document.getElementById('menu-toggle');
 const activeClass = 'menu-active';
 let menuItems = [];
 
+const setMenuToggleText = () => {
+  if (!document.body.classList.contains(activeClass)) {
+    menuToggle.textContent = 'View all';
+  } else {
+    menuToggle.textContent = '× Close';
+  }
+}
+
 const handleMenuItemClick = (item) => {
-  item.addEventListener('click', () => document.body.classList.remove(activeClass))
+  item.addEventListener('click', () => {
+    document.body.classList.remove(activeClass);
+    setMenuToggleText();
+  });
 }
 
 const addMenuItemAction = (menu) => {
@@ -35,6 +46,7 @@ const buildMenu = (menu) => {
 
 menuToggle.addEventListener('click', (e) => {
   document.body.classList.toggle(activeClass);
+  setMenuToggleText();
 });
 
 setupHeadlineRefs(verbs.children);

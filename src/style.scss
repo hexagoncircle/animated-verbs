@@ -8,6 +8,111 @@ html, body {
   height: 100%;
 }
 
+body {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+a:not([class]) {
+  color: darkslategray;
+
+  &:hover {
+    color: darken(darkslategray, 10%);
+  }
+}
+
+.verb-anchor {
+  position: absolute;
+  top: 1rem;
+}
+
+.btn--toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  right: 1rem;
+  text-transform: lowercase;
+  top: 1rem;
+  z-index: 200;
+
+  &:focus {
+    outline: solid 4px black;
+  }
+
+  .menu-active & {
+    color: white;
+
+    &:focus {
+      color: yellow;
+      outline-color: yellow;
+    }
+  }
+}
+
+.menu {
+  background-color: rgba(black, 0.95);
+  position: fixed;
+  display: none;
+  grid-template: repeat(6, 1fr) / repeat(3, 1fr);
+  height: 100%;
+  padding: 4rem;
+  place-items: center;
+  width: 100%;
+  z-index: 100;
+
+  .menu-active & {
+    display: grid;
+  }
+}
+
+.menu-item,
+.menu-item-link {
+  align-items: center;
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  width: 80%;
+}
+
+.menu-item-link {
+  color: white;
+  font-size: 4vmin;
+  text-decoration: none;
+
+  &:focus {
+    color: yellow;
+    outline: solid 4px yellow;
+  }
+}
+
+.project-info {
+  bottom: 0;
+  margin: auto;
+  font-size: 0.7rem;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  transition: opacity 0.5s ease-out;
+
+  @media (hover: hover) {
+    opacity: 0.25;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+}
+
 .container {
   max-height: 100vh;
 	overflow-y: scroll;
@@ -20,15 +125,19 @@ html, body {
   align-items: center;
   background-color: var(--color);
   display: flex;
-  font-family: 'Lexend Deca', sans-serif;
   font-weight: 700;
-  font-size: calc(1rem + 15vmin);
+  font-size: calc(0.8rem + 15vmin);
   height: 100vh;
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
+  position: relative;
   scroll-snap-align: start;
   width: 100vw;
+
+  &:focus {
+    outline: none;
+  }
 
   @for $i from 1 through length($colors) {
     &:nth-child(#{$i}) {

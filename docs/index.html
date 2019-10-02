@@ -10,7 +10,11 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<main class="container">
+<button id="menu-toggle" class="btn--toggle">view all</button>
+<nav class="site-navigation">
+  <ul id="verb-menu" class="menu"></ul>
+</nav>
+<main id="verb-list" class="container">
   <h2 data-splitting class="headline headline--jump">jumping</h2>
   <h2 data-splitting class="headline headline--float">floating</h2>
   <h2 data-splitting class="headline headline--jog">jogging</h2>
@@ -30,6 +34,14 @@
   <h2 data-splitting class="headline headline--blink">blinking</h2>
   <h2 data-splitting class="headline headline--tumble">tumbling</h2>
 </main>
+<footer class="project-info">
+  <p>Created for kicks by Ryan Mulligan</p>
+  <p>
+    <a href="https://codepen.io/hexagoncircle" target="_blank">CodePen</a>
+    <a href="https://github.com/hexagoncircle/animated-verbs" target="_blank">View project on Github</a>
+    <a href="https://twitter.com/hexagoncircle" target="_blank">Twitter</a>
+  </p>
+</footer>
   <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
 <script  src="./script.js"></script>
 

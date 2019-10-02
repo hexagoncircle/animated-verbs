@@ -5,6 +5,94 @@
 html, body {
   height: 100%; }
 
+body {
+  font-family: 'Lexend Deca', sans-serif; }
+
+a:not([class]) {
+  color: darkslategray; }
+  a:not([class]):hover {
+    color: #1c2f2f; }
+
+.verb-anchor {
+  position: absolute;
+  top: 1rem; }
+
+.btn--toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  right: 1rem;
+  text-transform: lowercase;
+  top: 1rem;
+  z-index: 200; }
+  .btn--toggle:focus {
+    outline: solid 4px black; }
+  .menu-active .btn--toggle {
+    color: white; }
+    .menu-active .btn--toggle:focus {
+      color: yellow;
+      outline-color: yellow; }
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  display: none;
+  grid-template: repeat(6, 1fr)/repeat(3, 1fr);
+  height: 100%;
+  padding: 4rem;
+  place-items: center;
+  width: 100%;
+  z-index: 100; }
+  .menu-active .menu {
+    display: grid; }
+
+.menu-item,
+.menu-item-link {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 80%; }
+
+.menu-item-link {
+  color: white;
+  font-size: 4vmin;
+  text-decoration: none; }
+  .menu-item-link:focus {
+    color: yellow;
+    outline: solid 4px yellow; }
+
+.project-info {
+  bottom: 0;
+  margin: auto;
+  font-size: 0.7rem;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out; }
+  @media (hover: hover) {
+    .project-info {
+      opacity: 0.25; } }
+  .project-info:hover {
+    opacity: 1; }
+  .project-info a {
+    display: inline-block;
+    padding: 0.5rem; }
+
 .container {
   max-height: 100vh;
   overflow-y: scroll;
@@ -22,9 +110,8 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Lexend Deca', sans-serif;
   font-weight: 700;
-  font-size: calc(1rem + 15vmin);
+  font-size: calc(0.8rem + 15vmin);
   height: 100vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -32,8 +119,11 @@ html, body {
   overflow: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
+  position: relative;
   scroll-snap-align: start;
   width: 100vw; }
+  .headline:focus {
+    outline: none; }
   .headline:nth-child(1) {
     --color: #f9ca24; }
   .headline:nth-child(2) {

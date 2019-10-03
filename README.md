@@ -1,6 +1,6 @@
 # Animated Verbs
 
-Site: [https://animatedverbs.com](https://animatedverbs.com)
+Site: [animatedverbs.com](https://animatedverbs.com)
 
 This is a personal, just-for-kicks project that utilizes the [Splitting.js](https://splitting.js.org/) library to animate characters in verbs as a representation of their action. This started off as three separate CodePen ideas and this repo is the collection of those parts.
 

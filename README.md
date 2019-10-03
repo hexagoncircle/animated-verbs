@@ -7,6 +7,6 @@ This is a personal, just-for-kicks project that utilizes the [Splitting.js](http
 The original parts:
 
 * CodePen Collection: [https://codepen.io/collection/XKEvEV](https://codepen.io/collection/XKEvEV)
-* Part one: [https://codepen.io/hexagoncircle/pen/MWgbqON](https://codepen.io/hexagoncircle/pen/MWgbqON).
+* Part one: [https://codepen.io/hexagoncircle/pen/MWgbqON](https://codepen.io/hexagoncircle/pen/MWgbqON)
 * Part two: [https://codepen.io/hexagoncircle/pen/OJLxWKq](https://codepen.io/hexagoncircle/pen/OJLxWKq)
 * Part three: [https://codepen.io/hexagoncircle/pen/oNvMLRQ](https://codepen.io/hexagoncircle/pen/oNvMLRQ)

@@ -48,7 +48,7 @@ function copyToDist() {
  * $ npm run build
  * The default build task, running these tasks in series.
  */
-const build = series(clean, copyToDist, ...orderedTasks);
+const build = series(copyToDist, ...orderedTasks);
 
 module.exports = {
   default: build,

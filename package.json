@@ -25,7 +25,7 @@
     "webpack-dev-server": "^3.2.1",
     "gulp-inject-partials": "^1.0.5",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "gulp-autoprefixer": "^6.1.0"
   },
   "tasks": {
